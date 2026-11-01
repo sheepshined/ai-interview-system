@@ -1,0 +1,77 @@
+/* ============================================================
+   墨卷档案 · 设计令牌 (Design Tokens)
+   方向：编辑部纸感 / 宋体大标题 / 朱砂单强调色 / 细线网格
+   ============================================================ */
+:root {
+  /* ── 纸与墨 ── */
+  --paper:      #F4F1E8;
+  --paper-deep: #EBE6D9;
+  --sheet:      #FBF9F3;
+  --sheet-2:    #F6F3EA;
+  --ink:        #17150F;
+  --ink-2:      #4C4739;
+  --ink-3:      #8B8474;
+  --ink-4:      #B4AD9D;
+
+  --line:        rgba(23, 21, 15, 0.14);
+  --line-soft:   rgba(23, 21, 15, 0.08);
+  --line-strong: rgba(23, 21, 15, 0.38);
+
+  /* ── 朱砂（唯一强强调色） ── */
+  --vermilion:      #D93A1F;
+  --vermilion-deep: #A82A12;
+  --verm-wash:      rgba(217, 58, 31, 0.07);
+  --verm-line:      rgba(217, 58, 31, 0.34);
+
+  /* ── 辅助色（数据与状态，克制使用） ── */
+  --indigo-ink:  #23405C;
+  --indigo-wash: rgba(35, 64, 92, 0.08);
+  --pine:        #2E6B50;
+  --pine-wash:   rgba(46, 107, 80, 0.08);
+  --ochre:       #A9741C;
+  --ochre-wash:  rgba(169, 116, 28, 0.09);
+
+  /* ── 暗房（面试间 · 专注模式） ── */
+  --room:       #191712;
+  --room-2:     #211E17;
+  --room-3:     #2A261D;
+  --room-line:  rgba(240, 234, 216, 0.13);
+  --room-ink:   #EFE9DA;
+  --room-ink-2: #A79F8B;
+  --room-ink-3: #6F6857;
+
+  /* ── 字体 ── */
+  --f-display: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', 'STSong', serif;
+  --f-sans:    'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --f-mono:    'JetBrains Mono', 'SFMono-Regular', 'Menlo', 'Consolas', monospace;
+  --f-latin:   'Instrument Serif', 'Times New Roman', Georgia, serif;
+
+  /* ── 尺度与节奏 ── */
+  --rail: 268px;
+  --rail-mini: 84px;
+  --maxw: 1240px;
+  --gutter: clamp(20px, 4vw, 56px);
+  --section-y: clamp(72px, 11vh, 148px);
+
+  /* ── 形状（锐利编辑感，几乎无圆角） ── */
+  --r-0: 0px;
+  --r-1: 2px;
+  --r-2: 3px;
+  --r-pill: 999px;
+
+  /* ── 阴影（纸页叠加，而非漂浮发光） ── */
+  --sh-sheet: 0 1px 0 rgba(23, 21, 15, 0.04), 0 18px 44px -30px rgba(23, 21, 15, 0.35);
+  --sh-lift:  0 2px 0 rgba(23, 21, 15, 0.05), 0 26px 60px -34px rgba(23, 21, 15, 0.45);
+  --sh-stamp: 0 10px 26px -14px rgba(168, 42, 18, 0.55);
+
+  /* ── 运动 ── */
+  --ease:      cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-inout:cubic-bezier(0.65, 0.05, 0.36, 1);
+  --dur-1: 0.18s;
+  --dur-2: 0.36s;
+  --dur-3: 0.72s;
+  --dur-4: 1.1s;
+
+  /* ── 颗粒噪点（纸纹） ── */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+}

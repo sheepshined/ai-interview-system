@@ -1,0 +1,41 @@
+/* ============================================================
+   应用层样式：路由转场 / 吐司队列 / 进度条动画
+   （设计基准仍以 tokens.css + base.css + components.css 为准）
+   ============================================================ */
+
+/* ── 路由转场 ── */
+.page-enter-active, .page-leave-active { transition: opacity 0.22s ease, transform 0.22s var(--ease); }
+.page-enter-from { opacity: 0; transform: translateY(8px); }
+.page-leave-to { opacity: 0; transform: translateY(-4px); }
+
+/* ── 吐司队列 ── */
+.toast-host {
+  position: fixed;
+  left: 50%; bottom: 34px;
+  transform: translateX(-50%);
+  z-index: 120;
+  display: flex; flex-direction: column; align-items: center; gap: 9px;
+  pointer-events: none;
+}
+.toast-host .toast { position: static; transform: none; }
+.toast-enter-active, .toast-leave-active { transition: all 0.28s var(--ease); }
+.toast-enter-from { opacity: 0; transform: translateY(14px); }
+.toast-leave-to { opacity: 0; transform: translateY(6px); }
+
+/* ── 进度条 / 评分条：随父级 .is-in 生长 ── */
+.bar-anim {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1s var(--ease);
+  transition-delay: var(--bd, 0.1s);
+}
+.is-in .bar-anim { transform: scaleX(var(--w, 1)); }
+
+/* 静态高度进度条（横向）复用时也支持 .bar-anim */
+.progress-fill.bar-anim, .meter-fill.bar-anim { width: 100%; }
+
+/* ── 通用小工具 ── */
+.stack-sm { display: flex; flex-direction: column; gap: 10px; }
+.row-between { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+.muted { color: var(--ink-3); }
+.nowrap { white-space: nowrap; }

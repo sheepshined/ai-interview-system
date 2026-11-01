@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "models": [
+    {
+      "name": "SenseVoice int8",
+      "url": "https://huggingface.co/csukuangfj/sherpa-onnx-sense-voice-zh-en-ja-ko-yue-2024-07-17/resolve/2365baeacb507f821a0c8120fcee3d484dba7a07/model.int8.onnx",
+      "destination": "models/sensevoice/model.int8.onnx",
+      "size": 239233841,
+      "sha256": "c71f0ce00bec95b07744e116345e33d8cbbe08cef896382cf907bf4b51a2cd51"
+    },
+    {
+      "name": "SenseVoice tokens",
+      "url": "https://huggingface.co/csukuangfj/sherpa-onnx-sense-voice-zh-en-ja-ko-yue-2024-07-17/resolve/2365baeacb507f821a0c8120fcee3d484dba7a07/tokens.txt",
+      "destination": "models/sensevoice/tokens.txt",
+      "size": 315894,
+      "sha256": "f449eb28dc567533d7fa59be34e2abca8784f771850c78a47fb731a31429a1dc"
+    },
+    {
+      "name": "Silero VAD v4",
+      "url": "https://github.com/snakers4/silero-vad/raw/refs/tags/v4.0/files/silero_vad.onnx",
+      "destination": "models/silero/silero_vad.onnx",
+      "size": 1807522,
+      "sha256": "a35ebf52fd3ce5f1469b2a36158dba761bc47b973ea3382b3186ca15b1f5af28"
+    }
+  ]
+}
